@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         email = findViewById(R.id.txtUser)
         sandi = findViewById(R.id.txtPassword)
-
         btnLoginActivity = findViewById(R.id.login)
         btnRegisActivity = findViewById(R.id.regis)
 
@@ -50,8 +49,8 @@ class MainActivity : AppCompatActivity() {
 
         btnRegisActivity.setOnClickListener{
             try {
-                val moveIntent = Intent(this@MainActivity, RegisActivity::class.java)
-                startActivity(moveIntent)
+                val x = Intent(this@MainActivity, RegisActivity::class.java)
+                startActivity(x)
             } catch (e: Exception) {
                 Toast.makeText(
                     applicationContext,

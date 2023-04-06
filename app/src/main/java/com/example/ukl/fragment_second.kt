@@ -41,11 +41,11 @@ class fragment_second : Fragment() {
             Observer { s -> txtName!!.text = s })
 
         txtEmail = view.findViewById(R.id.textViewEmail)
-        communicationViewModel!!.name.observe(requireActivity(),
+        communicationViewModel!!.email.observe(requireActivity(),
             Observer { s -> txtEmail!!.text = s })
 
         txtSandi = view.findViewById(R.id.textViewSandi)
-        communicationViewModel!!.name.observe(requireActivity(),
+        communicationViewModel!!.sandi.observe(requireActivity(),
             Observer { s -> txtSandi!!.text = s })
 
     }

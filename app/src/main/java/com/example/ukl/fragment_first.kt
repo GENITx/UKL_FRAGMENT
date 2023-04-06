@@ -38,6 +38,34 @@ class fragment_first : Fragment() {
                 }
                 override fun afterTextChanged(editable: Editable) { }
             })
+
+        val emailEditText = view.findViewById<TextInputEditText>(R.id.textInputTextEmail)
+        emailEditText.addTextChangedListener(
+            object : TextWatcher {
+                override fun beforeTextChanged(
+                    charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                }
+                override fun onTextChanged(charSequence: CharSequence,
+
+                                           i: Int, i1: Int, i2: Int) {
+                    communicationViewModel!!.setEmail(charSequence.toString())
+                }
+                override fun afterTextChanged(editable: Editable) { }
+            })
+
+        val sandiEditText = view.findViewById<TextInputEditText>(R.id.textInputTextSandi)
+        sandiEditText.addTextChangedListener(
+            object : TextWatcher {
+                override fun beforeTextChanged(
+                    charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                }
+                override fun onTextChanged(charSequence: CharSequence,
+
+                                           i: Int, i1: Int, i2: Int) {
+                    communicationViewModel!!.setSandi(charSequence.toString())
+                }
+                override fun afterTextChanged(editable: Editable) { }
+            })
     }
     companion object {
         fun newInstance(): fragment_first {
